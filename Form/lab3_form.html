@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lanjutan</title>
+</head>
+<body>
+    <header>
+        <h1>Form Mahasiswa</h1>
+    </header>
+<form action="proses.php" method="post">
+    <fieldset>
+        <legend>Data Mahasiswa</legend>
+        <p>
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama">
+        </p>
+        <p>
+            <label for="NIM">NIM</label>
+            <textarea id="NIM" name="NIM" cols="20" rows="1"></textarea>
+        </p>
+        <p>
+            <label>Jenis Kelamin</label>
+            <input id="jk_l" type="radio" name="kelamin" value="L" /><label
+for="jk_l">Laki-laki</label>
+            <input id="jk_p" type="radio" name="kelamin" value="P" /><label
+for="jk_p">Perempuan</label>
+    
+    <h2>Pilih Fakultas Anda:</h2>
+    <form action="proses_form.php" method="post">
+        <label for="Fakultas">Pilih Fakultas:</label>
+        <select id="Studi" name="Studi">
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Teknik Industri">Teknik Industri</option>
+            <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+        </select>
+
+        <h2>Pilih Mata Kuliah Anda:</h2>
+        <label for="Mata Kuliah">Pilih Mata Kuliah:</label>
+        <select id="Mata Kuliah" name="Mata kuliah[]" multiple="multiple">
+            <option value="Pemograman Web 1">Pemograman Web</option>
+            <option value="Probabilitas dan Statistika">Probabilitas dan Statistika</option>
+            <option value="Pemograman Mobile 1">Pemograman Mobile</option>
+            <option value="Agama">Agama</option>
+            <option value="Pemrograman Orientasi Objek">Pemrograman Orientasi Objek</option>
+            <option value="Jaringan Komputer">Jaringan Komputer</option>
+            <option value="Rekayasa Prangkat Lunak">Rekayasa Perangkat Lunak</option>
+        </select>
+    </fieldset>
+
+
+    <style>
+        form p > label {
+        display: inline-block;
+        width: 100px;
+        }
+        form input[type="text"], form textarea {
+        border: 1px solid #197a43;
+        }
+        form input[type="submit"] {
+        border: 1px solid #197a43;
+        background-color: #197a43;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5px 15px;
+        }
+    </style>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
